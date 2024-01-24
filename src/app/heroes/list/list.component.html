@@ -1,0 +1,33 @@
+<div class="hero-list-container">
+  <h3>Characters list</h3>
+
+  <ng-container *ngIf="nameDeleted; else nothingWasDeletedTemplate">
+    <h4>
+      Hero deleted: <small class="text-danger">{{ nameDeleted }}</small>
+    </h4>
+  </ng-container>
+
+  <ng-template #nothingWasDeletedTemplate>
+    <h4>Haven't deleted some character.</h4>
+  </ng-template>
+
+  <button
+    *ngIf="names.length > 0"
+    class="btn btn-outline-danger"
+    (click)="deleteLastHero()"
+  >
+    Delete character
+  </button>
+
+  <button
+    *ngIf="names.length === 0"
+    class="btn btn-primary"
+    (click)="resetNames()"
+  >
+    Reset
+  </button>
+
+  <ul class="mt-2 list-group">
+    <li *ngFor="let name of names" class="list-group-item">{{ name }}</li>
+  </ul>
+</div>

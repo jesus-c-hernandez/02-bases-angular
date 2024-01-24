@@ -1,0 +1,13 @@
+h1 {
+  font-size: 4.8rem;
+  margin-bottom: 12px;
+}
+
+td,
+dd {
+  font-size: 1.8rem;
+}
+
+dd {
+  font-weight: 600;
+}
