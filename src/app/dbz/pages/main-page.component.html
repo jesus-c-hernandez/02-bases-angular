@@ -1,0 +1,18 @@
+<h1>DBZ characters</h1>
+<hr />
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <app-dbz-list
+        [characterList]="characters"
+        (onDeleteCharacterId)="onDeleteCharacterById($event)"
+      ></app-dbz-list>
+    </div>
+    <div class="col">
+      <app-dbz-add-character
+        (emitNewCharacter)="onAddCharacter($event)"
+      ></app-dbz-add-character>
+    </div>
+  </div>
+</div>
